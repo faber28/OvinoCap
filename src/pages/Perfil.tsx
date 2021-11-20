@@ -2,17 +2,12 @@ import "./Page.css";
 import "./css/Captura.css";
 import {  IonFab, IonFabButton } from '@ionic/react';
 import {
-  IonContent,
-  IonHeader,
-  IonPage,
   IonTitle,
   IonToolbar,
   IonInput,
   IonItem,
   IonLabel,
-  IonList,
   IonItemDivider,
-  IonTabButton,
 } from "@ionic/react";
 
 import {
@@ -27,12 +22,9 @@ import {
 } from "@ionic/react";
 import { useState } from "react";
 import {
-  calendar,
-  personCircle,
   save,
   paw,
   location,
-  informationCircle,
 } from "ionicons/icons";
 
 const Perfil: React.FC = () => {

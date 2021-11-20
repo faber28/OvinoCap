@@ -23,8 +23,6 @@ const Resultado: React.FC = () => {
     setNivel("4");
   };
 
-  takePicture();
-
   if (porcentaje === "") {
     return (
       <div className="screen">
@@ -35,7 +33,6 @@ const Resultado: React.FC = () => {
             <label>Resultado de Evaluar el ojo del Ovino</label>
             <hr className="purpleHr" />
             <label>Imagen del Ovino</label>
-            <div></div>
             <div className="res">
               <img src={imagen} alt="Conjuntiva" />
             </div>
