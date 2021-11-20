@@ -56,7 +56,7 @@ const Captura: React.FC = () => {
         <div className="divDato">
           <hr className="grayH" />
           <Link className="link" to="/page/Resultado">
-            <button>Analizar</button>
+            <button>Tomar Foto</button>
           </Link>
           {/* <img alt="OvineFoto" className="ig" src={imagen}/> */}
           {cardOvines.map((ovine) => {
