@@ -38,6 +38,7 @@ import {
 const Perfil: React.FC = () => {
   const [text, setText] = useState<string>();
   const [number, setNumber] = useState<number>();
+  const [number1, setNumber1] = useState<number>();
   return (
     <div>
       
@@ -113,20 +114,22 @@ const Perfil: React.FC = () => {
             ></IonInput>
           </IonItem>
           <br />
+         
           <IonItemDivider>Telefono</IonItemDivider>
           <IonItem className="inputradio">
             <IonInput
             
               type="number"
-              value={number}
+              value={number1}
               placeholder="Ej: 3003987175"
-              onIonChange={(e) => setNumber(parseInt(e.detail.value!, 10))}
+              onIonChange={(e) => setNumber1(parseInt(e.detail.value!, 10))}
             ></IonInput>
           </IonItem>
 
         
         </div>
         <br />
+        
         <IonFooter>
           <IonToolbar>
             <IonTitle>Salir</IonTitle>
@@ -138,15 +141,15 @@ const Perfil: React.FC = () => {
         </IonTabButton> */}
      
       </div>
-      <div className="">
-
-    
-      <IonFab vertical="bottom" horizontal="end" slot="fixed">
+     
+          <IonFab vertical="bottom" horizontal="end" slot="fixed">
           <IonFabButton>
-            <IonIcon className="stiky" icon={save}   />
+            <IonIcon  icon={save}   />
           </IonFabButton>
         </IonFab>
-        </div>
+    
+   
+       
     </div>
   );
 };
