@@ -9,6 +9,7 @@ import {
   IonIcon,
   IonLabel,
   IonFooter,
+  IonItemDivider,
 } from "@ionic/react";
 
 const Resultado: React.FC = () => {
@@ -18,15 +19,14 @@ const Resultado: React.FC = () => {
         <button>Registrar Animal</button>
         <div className="divDatos">
           <hr className="grayHr" />
-          <label>Resultado de Evaluar el ojo del Ovino</label>
+          <IonItemDivider>Resultado de Evaluar el ojo del Ovino</IonItemDivider>
+          
           <hr className="purpleHr"/>
           <label>Imagen del Ovino</label>
           <div></div>
-          <div className="res">
-            <img
-              src="https://www.cfsph.iastate.edu/DiseaseInfo/ImageDB/BT/BT_011.jpg"
-              alt=""
-            />
+          <div className="res" >
+          <img src="https://www.cfsph.iastate.edu/DiseaseInfo/ImageDB/BT/BT_011.jpg" alt="" />
+          
           </div>
           <label> Porcentaje 98%</label>
           <label>Nivel: 4</label>

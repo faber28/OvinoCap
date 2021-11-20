@@ -1,7 +1,7 @@
-.divBackground{
+.divBackground {
     width: 100%;
     height: 100%;
-    background-color: rgb(97, 20, 97);
+    background-color: rgb(77, 44, 226);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@
     padding-top: 50px;
 }
 
-.divDatos{
+.divDatos {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -28,32 +28,34 @@
     align-items: center;
 }
 
-.res{
-    margin-top: 10px;
+.res img {
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
 }
 
-.grayHr{
+.grayHr {
     width: 25%;
     margin-top: 1px;
-    background-color: gray; 
+    background-color: gray;
     border: 2px solid gray;
     border-radius: 5px;
 }
 
-.purpleHr{
+.purpleHr {
     margin-top: 10px;
-    background-color: purple; 
-    border: 2px solid purple;
+    background-color: rgb(26, 39, 221);
+    border: 0.5px solid rgb(39, 42, 214);
     border-radius: 5px;
 }
 
-label{
+label {
     font-family: normal;
     margin-top: 10px;
     text-align: center;
 }
 
-select{
+select {
     margin-top: 10px;
     background-color: rgb(209, 175, 209);
     border-radius: 15px;
@@ -61,14 +63,14 @@ select{
     padding: 5px;
 }
 
-input{
+input {
     border: 1px solid #d9d9d9;
     margin-top: 10px;
     border-radius: 15px;
     padding: 5px;
 }
 
-.divBackground button{
+.divBackground button {
     margin-top: 25px;
     color: white;
     font-family: bold;
@@ -79,6 +81,6 @@ input{
     padding: 10px;
 }
 
-div img{
+div img {
     border-radius: 50%;
 }
