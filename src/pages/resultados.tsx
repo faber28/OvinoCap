@@ -19,7 +19,11 @@ const Resultado: React.FC = () => {
       resultType: CameraResultType.Uri,
     });
     setImagen(image.webPath);
+    setPorcentaje("95%");
+    setNivel("4");
   };
+
+  takePicture();
 
   if (porcentaje === "") {
     return (
