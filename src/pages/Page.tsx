@@ -12,6 +12,7 @@ import { useParams } from "react-router";
 import "./Page.css";
 import Captura from "./Captura";
 import Perfil from "./Perfil";
+import Resultado from "./resultados";
 
 const Page: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -57,6 +58,28 @@ const Page: React.FC = () => {
             </IonToolbar>
           </IonHeader>
           <Perfil />
+        </IonContent>
+      </IonPage>
+  );
+  }else if(name === "Resultado"){
+    return (
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot="start">
+              <IonBackButton defaultHref="/Page/Inicio" />
+            </IonButtons>
+            <IonTitle>{name}</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+  
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">{name}</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <Resultado />
         </IonContent>
       </IonPage>
   );
