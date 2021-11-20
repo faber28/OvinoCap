@@ -1,0 +1,40 @@
+
+.screen{
+    display: flex;
+    background-color: #FFF;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    align-items: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    color: gray;
+}
+
+.container{
+    width: 100%;
+}
+.link{
+    background-color:transparent;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btnRelleno{
+    color: white;
+    width: 50%;
+    font-size: 25px;
+    background-color: purple;
+    border-radius: 10px;
+    padding: 10px;
+}

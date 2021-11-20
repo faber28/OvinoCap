@@ -1,0 +1,17 @@
+.cardSheep{
+    display: flex;
+    flex-direction:column;
+    width: 90%;
+    box-shadow: 0px 5px 15px -6px black;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+div hr{
+    width: 100%;
+    margin-top: 5px;
+    background-color: gray; 
+    border: solid gray;
+    border-radius: 5px;
+}
