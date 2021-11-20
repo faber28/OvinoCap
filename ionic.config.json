@@ -1,0 +1,7 @@
+{
+  "name": "OvinoCap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
