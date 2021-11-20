@@ -1,4 +1,4 @@
-.divBack{
+.divBack {
     width: 100%;
     height: 100%;
     background-color: rgb(97, 20, 97);
@@ -13,7 +13,51 @@
     padding-top: 50px;
 }
 
-.divDato{
+.divCont {
+    padding: 20px;
+}
+
+.NOTA {
+    display: block;
+    float: left;
+    top: -55px;
+    padding-left: 15px;
+}
+
+.perfilFoto {
+    display: block;
+    float: right;
+    bottom: -3px;
+    left: 0px;
+}
+
+.sticked {
+    position: sticky;
+}
+
+.inputradio {
+    background-color: rgb(44, 46, 209);
+    border-radius: 22px;
+}
+
+.perfilFoto img {
+    position: relative;
+    display: block;
+    float: right;
+    bottom: -3px;
+    left: 0px;
+    width: 82px;
+    height: 80px;
+    margin-right: 8px;
+}
+
+.userLogo {
+    display: block;
+    float: left;
+    top: -55px;
+}
+
+.divDato {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -28,15 +72,15 @@
     margin-top: 50px;
 }
 
-.grayH{
+.grayH {
     width: 25%;
     margin-top: 1px;
-    background-color: gray; 
+    background-color: gray;
     border: 2px solid gray;
     border-radius: 5px;
 }
 
-div button{
+div button {
     margin-top: 25px;
     border: 2px solid purple;
     width: 50%;
