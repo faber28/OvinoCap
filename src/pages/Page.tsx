@@ -3,6 +3,7 @@ import {
   IonContent,
   IonHeader,
   IonMenuButton,
+  IonBackButton,
   IonPage,
   IonTitle,
   IonToolbar,
@@ -43,9 +44,9 @@ const Page: React.FC = () => {
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
-              <IonMenuButton />
+              <IonBackButton defaultHref="/Page/Inicio" />
             </IonButtons>
-            <IonTitle>{name}</IonTitle>
+            <IonTitle>Mi {name}</IonTitle>
           </IonToolbar>
         </IonHeader>
   
