@@ -1,8 +1,6 @@
 import "./Page.css";
 import "./css/Captura.css";
 import CardSheep from "../components/CardSheep";
-import { Camera, CameraResultType } from "@capacitor/camera";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface OvinesCard {
@@ -52,26 +50,13 @@ const cardOvines: OvinesCard[] = [
 ];
 
 const Captura: React.FC = () => {
-  const [imagen, setImagen] = useState<any>(
-    "https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
-  );
-
-  const takePicture = async () => {
-    const image = await Camera.getPhoto({
-      quality: 90,
-      allowEditing: true,
-      resultType: CameraResultType.Uri,
-    });
-    setImagen(image.webPath);
-  };
-
   return (
     <div className="screen">
       <div className="divBack">
         <div className="divDato">
           <hr className="grayH" />
           <Link className="link" to="/page/Resultado">
-            <button onClick={() => takePicture()}>Tomar Foto</button>
+            <button>Analizar</button>
           </Link>
           {/* <img alt="OvineFoto" className="ig" src={imagen}/> */}
           {cardOvines.map((ovine) => {

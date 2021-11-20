@@ -13,6 +13,7 @@ import "./Page.css";
 import Captura from "./Captura";
 import Perfil from "./Perfil";
 import Resultado from "./resultados";
+import Registro from "./Registro";
 
 const Page: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -80,6 +81,28 @@ const Page: React.FC = () => {
             </IonToolbar>
           </IonHeader>
           <Resultado />
+        </IonContent>
+      </IonPage>
+  );
+  }else if(name === "Registrar"){
+    return (
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot="start">
+              <IonBackButton defaultHref="/Page/Resultado" />
+            </IonButtons>
+            <IonTitle>{name}</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+  
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">{name}</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <Registro />
         </IonContent>
       </IonPage>
   );
