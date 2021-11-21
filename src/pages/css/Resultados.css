@@ -58,9 +58,10 @@
 
 
 .divDatos label {
-    font-family: normal;
+    font-size: medium;
     margin-top: 10px;
     text-align: center;
+    color: gray;
 }
 
 .divBackground button {
