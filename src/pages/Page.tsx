@@ -14,11 +14,12 @@ import Captura from "./Captura";
 import Perfil from "./Perfil";
 import Resultado from "./resultados";
 import Registro from "./Registro";
+import Bienvenido from "./Bienvenido";
 
 const Page: React.FC = () => {
   const { name } = useParams<{ name: string }>();
 
-  if(name === "Inicio"){
+  if (name === "Inicio") {
     return (
       <IonPage>
         <IonHeader>
@@ -29,7 +30,7 @@ const Page: React.FC = () => {
             <IonTitle>{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-  
+
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
@@ -39,8 +40,8 @@ const Page: React.FC = () => {
           <Captura />
         </IonContent>
       </IonPage>
-  );
-  }else if(name === "Perfil"){
+    );
+  } else if (name === "Perfil") {
     return (
       <IonPage>
         <IonHeader>
@@ -51,7 +52,7 @@ const Page: React.FC = () => {
             <IonTitle>Mi {name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-  
+
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
@@ -61,8 +62,8 @@ const Page: React.FC = () => {
           <Perfil />
         </IonContent>
       </IonPage>
-  );
-  }else if(name === "Resultado"){
+    );
+  } else if (name === "Resultado") {
     return (
       <IonPage>
         <IonHeader>
@@ -73,7 +74,7 @@ const Page: React.FC = () => {
             <IonTitle>{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-  
+
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
@@ -83,8 +84,8 @@ const Page: React.FC = () => {
           <Resultado />
         </IonContent>
       </IonPage>
-  );
-  }else if(name === "Registrar"){
+    );
+  } else if (name === "Registrar") {
     return (
       <IonPage>
         <IonHeader>
@@ -95,7 +96,7 @@ const Page: React.FC = () => {
             <IonTitle>{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-  
+
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
@@ -105,28 +106,54 @@ const Page: React.FC = () => {
           <Registro />
         </IonContent>
       </IonPage>
-  );
+    );
   }
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>{name}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
+   else if (name === "Bienvenido") {
+    return (
+      <IonPage>
+        <IonHeader>
           <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
+            <IonButtons slot="start">
+              <IonBackButton defaultHref="/Page/Bienvenido" />
+            </IonButtons>
+            <IonTitle>{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-      </IonContent>
-    </IonPage>
+
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">{name}</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <Registro />
+        </IonContent>
+      </IonPage>
     );
+  }
+  
+    return (
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot="start">
+              <IonMenuButton />
+            </IonButtons>
+            <IonTitle>{name}</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">{name}</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <Bienvenido />
+        </IonContent>
+      </IonPage>
+    );
+
 };
 
 export default Page;

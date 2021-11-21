@@ -15,6 +15,7 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 import "./theme/variables.css";
+import Bienvenido from "./pages/Bienvenido";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,12 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
+              <Inicio />
+            </Route>
+            <Route path="/Bienvenido" exact={true}>
+              <Bienvenido />
+            </Route>
+            <Route path="/Inicio" exact={true}>
               <Inicio />
             </Route>
             <Route path="/page/:name" exact={true}>
