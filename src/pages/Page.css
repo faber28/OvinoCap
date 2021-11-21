@@ -1,5 +1,4 @@
-
-.screen{
+.screen {
     display: flex;
     background-color: #FFF;
     flex-direction: column;
@@ -10,27 +9,28 @@
     align-items: center;
 }
 
-label{
+label {
     font-weight: bold;
 }
 
-p{
+p {
     text-align: center;
     color: gray;
 }
 
-.container{
+.container {
     width: 100%;
 }
-.link{
-    background-color:transparent;
+
+.link {
+    background-color: transparent;
     color: transparent;
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.btnRelleno{
+.btnRelleno {
     color: white;
     width: 50%;
     font-size: 25px;

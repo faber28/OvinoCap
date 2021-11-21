@@ -90,7 +90,7 @@ const Perfil: React.FC = () => {
               <IonSelectOption value="brown">Colombia</IonSelectOption>
               <IonSelectOption value="blonde">Ecuador</IonSelectOption>
               <IonSelectOption value="black">Brazil</IonSelectOption>
-              <IonSelectOption value="black">Artgentina</IonSelectOption>
+              <IonSelectOption value="red">Argentina</IonSelectOption>
             </IonSelect>
           </IonItem>
 
