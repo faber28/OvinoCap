@@ -1,8 +1,6 @@
 import "./Page.css";
 import "./css/Registro.css";
 import {
-  IonTitle,
-  IonToolbar,
   IonInput,
   IonItem,
   IonLabel,
@@ -10,34 +8,26 @@ import {
   IonFabButton,
   IonFab,
   IonProgressBar,
-} from "@ionic/react";
-
-import {
+  IonTitle,
   IonListHeader,
-  IonFooter,
-  IonNote,
-  IonSegment,
-  IonSegmentButton,
   IonSelectOption,
   IonSelect,
   IonIcon,
 } from "@ionic/react";
 import { useState } from "react";
-import { save, apps, eye, paw, location } from "ionicons/icons";
+import { save, apps, eye, paw } from "ionicons/icons";
 const Registro: React.FC = () => {
   const [text, setText] = useState<string>();
-  const [number, setNumber] = useState<number>();
-  const [number1, setNumber1] = useState<number>();
+  const [id, setId] = useState<any>();
+  const [lote, setLote] = useState<any>();
   return (
     <div>
-      <div>
-      
-        <IonListHeader className="lav">Registrar Animal</IonListHeader>
+      <div className="tittle">
+        <IonTitle className="lav">Registrar Animal</IonTitle>
       </div>
       <div className="divCont">
         <form>
           <br />
-
           <IonItem className="inputradio">
             <IonLabel>Categorias</IonLabel>
             <IonIcon icon={apps} />
@@ -50,10 +40,11 @@ const Registro: React.FC = () => {
           <IonListHeader>Identificador del ovino</IonListHeader>
           <IonItem className="inputradio">
             <IonInput
+              type="number"
               color="primary"
-              value={text}
+              value={id}
               placeholder="Ej: 0003445"
-              onIonChange={(e) => setText(e.detail.value!)}
+              onIonChange={(e) => setId(e.detail.value!)}
             ></IonInput>
           </IonItem>
           <br />
@@ -65,14 +56,14 @@ const Registro: React.FC = () => {
               <IonSelectOption value="blonde">NO </IonSelectOption>
             </IonSelect>
           </IonItem>
-<br />
-
+          <IonListHeader>Lote</IonListHeader>
           <IonItem className="inputradio">
             <IonInput
+              type="number"
               color="primary"
-              value={text}
+              value={lote}
               placeholder="Ej: 125"
-              onIonChange={(e) => setText(e.detail.value!)}
+              onIonChange={(e) => setLote(e.detail.value!)}
             ></IonInput>
           </IonItem>
           <br />
@@ -85,33 +76,24 @@ const Registro: React.FC = () => {
             </IonSelect>
           </IonItem>
 
-<br />
-<IonItemDivider>Nivel de Conjuntiva :4 </IonItemDivider>
           <br />
-
+          <IonItemDivider>Nivel de Conjuntiva :4 </IonItemDivider>
+          <br />
           <IonProgressBar
-          className="progressbar"
+            className="progressbar"
             color="primary"
-            value={0.8}
+            value={0.75}
             buffer={0.5}
           ></IonProgressBar>
           <br />
         </form>
-     
       </div>
-      
-      <IonFab
-            className="bort"
-            vertical="bottom"
-            horizontal="end"
-            slot="fixed"
-          >
-            <IonFabButton>
-              <IonIcon icon={save} />
-            </IonFabButton>
-          </IonFab>
-         
-      
+
+      <IonFab className="bort" vertical="bottom" horizontal="end" slot="fixed">
+        <IonFabButton>
+          <IonIcon icon={save} />
+        </IonFabButton>
+      </IonFab>
     </div>
   );
 };

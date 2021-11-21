@@ -1,7 +1,11 @@
-.divBackground {
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.screen .divBackground {
     width: 100%;
     height: 100%;
-    background-color: rgb(77, 44, 226);
+    background-color: #2563EB;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +16,6 @@
     align-items: center;
     padding-top: 50px;
 }
-
 .divDatos {
     display: flex;
     flex-direction: column;
@@ -28,7 +31,7 @@
     align-items: center;
 }
 
-.res{
+.divDatos .res{
     margin-top: 20px;
 }
 
@@ -38,40 +41,26 @@
     border-radius: 150px;
 }
 
-.grayHr {
-    width: 25%;
-    margin-top: 1px;
-    background-color: gray;
-    border: 2px solid gray;
-    border-radius: 5px;
-}
-
-.purpleHr {
+.divDatos .purpleHr {
     margin-top: 10px;
-    background-color: rgb(26, 39, 221);
-    border: 0.5px solid rgb(39, 42, 214);
+    background-color: #2563EB;
+    border: 0.5px solid #2563EB;
+    border-radius: 25px;
+}
+
+.divDatos .grayHr {
+    width: 20%;
+    margin-top: 1px;
+    background-color: #2563EB;
+    border: 0.1px solid #2563EB;
     border-radius: 5px;
 }
 
-label {
+
+.divDatos label {
     font-family: normal;
     margin-top: 10px;
     text-align: center;
-}
-
-select {
-    margin-top: 10px;
-    background-color: rgb(209, 175, 209);
-    border-radius: 15px;
-    border: 1px solid purple;
-    padding: 5px;
-}
-
-input {
-    border: 1px solid #d9d9d9;
-    margin-top: 10px;
-    border-radius: 15px;
-    padding: 5px;
 }
 
 .divBackground button {
@@ -79,12 +68,23 @@ input {
     color: white;
     font-family: bold;
     font-size: 20px;
-    background-color: rgb(97, 20, 97);
+    background-color: #2563EB;
     border-radius: 10px;
     border: 2px solid white;
     padding: 10px;
 }
 
-div img {
+.divDatos button {
+    margin-top: 25px;
+    color: #2563EB;
+    font-family: bold;
+    font-size: 20px;
+    background-color: white; 
+    border-radius: 10px;
+    border: 2px solid #2563EB;
+    padding: 10px;
+}
+
+.divDatos div img {
     border-radius: 50%;
 }

@@ -132,9 +132,10 @@ div button {
     border-radius: 90%;
 }
 
-.titulo {
+.divBack .titulo {
+    font-size: medium;
     background-color: #2563EB;
-    color: antiquewhite;
-    position: relative;
-    left: 70px;
+    color: white;
+    width: auto;
+    text-align: center;
 }

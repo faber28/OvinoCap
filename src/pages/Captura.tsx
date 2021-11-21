@@ -2,22 +2,8 @@ import "./Page.css";
 import "./css/Captura.css";
 import CardSheep from "../components/CardSheep";
 import { Link } from "react-router-dom";
-import {
-  IonListHeader,
-  IonFooter,
-  IonNote,
-  IonSegment,
-  IonSegmentButton,
-  IonSelectOption,
-  IonSelect,
-  IonIcon,
-  IonItemDivider,
-} from "@ionic/react";
-import {
-  save,
-  paw,
-  camera,
-} from "ionicons/icons";
+import { IonIcon, IonTitle } from "@ionic/react";
+import { camera } from "ionicons/icons";
 interface OvinesCard {
   id: string;
   categoria: string;
@@ -68,8 +54,10 @@ const Captura: React.FC = () => {
   return (
     <div className="screen">
       <div className="divBack">
-      <IonListHeader className="titulo">Su Camara Debe Estar Limpia !</IonListHeader>
-      <IonIcon  className="camera" icon={camera} />
+        <IonTitle className="titulo">
+          Su Camara Debe Estar Limpia!
+        </IonTitle>
+        <IonIcon className="camera" icon={camera} />
         <div className="divDato">
           <hr className="grayH" />
           <Link className="link" to="/page/Resultado">
@@ -77,25 +65,19 @@ const Captura: React.FC = () => {
           </Link>
           <br />
 
-          <div  className="over">
-
-             
-
-          {/* <img alt="OvineFoto" className="ig" src={imagen}/> */}
-          {cardOvines.map((ovine) => {
-            return (
-            
-              <CardSheep 
-                id={ovine.id}
-                categoria={ovine.categoria}
-                raza={ovine.raza}
-                nivel={ovine.nivel}
-              />
-            
-            );
-          })}
-           
-              </div>
+          <div className="over">
+            {/* <img alt="OvineFoto" className="ig" src={imagen}/> */}
+            {cardOvines.map((ovine) => {
+              return (
+                <CardSheep
+                  id={ovine.id}
+                  categoria={ovine.categoria}
+                  raza={ovine.raza}
+                  nivel={ovine.nivel}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

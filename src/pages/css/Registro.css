@@ -73,11 +73,18 @@ form input {
     justify-content: space-around;
 }
 
-.lav {
+.tittle{
+    margin-top: 22px;
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.tittle .lav {
     font-size: medium;
-    position: relative;
-    left: 113px;
     top: 22px;
+    width: auto;
+    text-align: center;
 }
 
 .divCont {

@@ -36,7 +36,7 @@ const Resultado: React.FC = () => {
             <div className="res">
               <img src={imagen} alt="Conjuntiva" />
             </div>
-            <label> Porcentaje {porcentaje}</label>
+            <label>Porcentaje: {porcentaje}</label>
             <label>Nivel: {nivel}</label>
             <button onClick={()=>{alert("Primero toma una foto!");}}>Registrar</button>
           </div>
@@ -57,7 +57,7 @@ const Resultado: React.FC = () => {
             <div className="res">
               <img src={imagen} alt="Conjuntiva" />
             </div>
-            <label> Porcentaje {porcentaje}</label>
+            <label>Porcentaje: {porcentaje}</label>
             <label>Nivel: {nivel}</label>
             <Link className="link" to="/page/Registrar">
               <button>Registrar</button>
