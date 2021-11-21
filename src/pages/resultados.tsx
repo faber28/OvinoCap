@@ -3,6 +3,15 @@ import "./css/Resultados.css";
 import { Camera, CameraResultType } from "@capacitor/camera";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Dialog } from '@capacitor/dialog';
+
+
+const showAlert = async () => {
+  await Dialog.alert({
+    title: 'Espera!',
+    message: 'Debes tomar o agregar una foto antes de continuar',
+  });
+};
 
 const Resultado: React.FC = () => {
   const [imagen, setImagen] = useState<any>(
@@ -33,12 +42,13 @@ const Resultado: React.FC = () => {
             <label>Resultado de Evaluar el ojo del Ovino</label>
             <hr className="purpleHr" />
             <label>Imagen del Ovino</label>
+            <div></div>
             <div className="res">
               <img src={imagen} alt="Conjuntiva" />
             </div>
             <label>Porcentaje: {porcentaje}</label>
             <label>Nivel: {nivel}</label>
-            <button onClick={()=>{alert("Primero toma una foto!");}}>Registrar</button>
+            <button onClick={()=>{showAlert()}}>Registrar</button>
           </div>
         </div>
       </div>
