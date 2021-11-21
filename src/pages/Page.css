@@ -63,3 +63,8 @@
     border: 2px solid white;
     padding: 10px;
 }
+
+.tool{
+    display:flex;
+    flex-direction: column;
+}

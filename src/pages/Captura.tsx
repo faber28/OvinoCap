@@ -2,14 +2,21 @@ import "./Page.css";
 import "./css/Captura.css";
 import CardSheep from "../components/CardSheep";
 import { Link } from "react-router-dom";
-import { IonIcon, IonTitle } from "@ionic/react";
+import { IonAlert, IonIcon, IonTitle, setupConfig } from "@ionic/react";
 import { camera } from "ionicons/icons";
+import { App } from '@capacitor/app';
+import { useState } from "react";
+
 interface OvinesCard {
   id: string;
   categoria: string;
   raza: string;
   nivel: string;
 }
+
+setupConfig({
+  hardwareBackButton: false
+});
 
 const cardOvines: OvinesCard[] = [
   {
@@ -51,8 +58,36 @@ const cardOvines: OvinesCard[] = [
 ];
 
 const Captura: React.FC = () => {
+
+  const [showBackAlert, setShowBackAlert] = useState(false);
+
+  App.addListener('backButton', (ev: any) => {
+      setShowBackAlert(true);
+  });
+  
   return (
     <div className="screen">
+      <IonAlert
+            isOpen={showBackAlert}
+            header={'Por favor, confirma!'}
+            message={'¿Quieres salir de la aplicación?'}
+            buttons={[
+              {
+                text: 'Cancelar',
+                role: 'cancel',
+                cssClass: 'secondary',
+                handler: () => {}
+              },
+              {
+                text: 'Continuar',
+                handler: () => {
+                  App.exitApp();
+                }
+              }
+            ]}
+            onDidDismiss={() => setShowBackAlert(false)}
+            cssClass='my-custom-class'
+          />
       <div className="divBack">
         <IonTitle className="titulo">
           Su Camara Debe Estar Limpia!
