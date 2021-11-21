@@ -14,7 +14,7 @@ import Captura from "./Captura";
 import Perfil from "./Perfil";
 import Resultado from "./resultados";
 import Registro from "./Registro";
-import Bienvenido from "./Bienvenido";
+import Guia from "./Guia";
 
 const Page: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -108,17 +108,39 @@ const Page: React.FC = () => {
       </IonPage>
     );
   }
-   else if (name === "Bienvenido") {
+  else if(name === "Guia"){
     return (
       <IonPage>
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
-              <IonBackButton defaultHref="/Page/Bienvenido" />
+              <IonBackButton defaultHref="/Page/Inicio" />
             </IonButtons>
             <IonTitle>{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
+  
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">{name}</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <Guia />
+        </IonContent>
+      </IonPage>
+  );
+  }
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+          <IonTitle>{name}</IonTitle>
+        </IonToolbar>
+      </IonHeader>
 
         <IonContent fullscreen>
           <IonHeader collapse="condense">
@@ -130,30 +152,8 @@ const Page: React.FC = () => {
         </IonContent>
       </IonPage>
     );
-  }
   
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton />
-            </IonButtons>
-            <IonTitle>{name}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
-        <IonContent fullscreen>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">{name}</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-          <Bienvenido />
-        </IonContent>
-      </IonPage>
-    );
-
+   
 };
 
 export default Page;

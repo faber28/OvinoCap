@@ -1,6 +1,6 @@
 import "./Page.css";
 import "./css/Captura.css";
-import {  IonFab, IonFabButton } from '@ionic/react';
+import {  IonBackButton, IonButtons, IonFab, IonFabButton } from '@ionic/react';
 import {
   IonTitle,
   IonToolbar,
@@ -8,9 +8,6 @@ import {
   IonItem,
   IonLabel,
   IonItemDivider,
-} from "@ionic/react";
-
-import {
   IonListHeader,
   IonFooter,
   IonNote,
@@ -20,6 +17,7 @@ import {
   IonSelect,
   IonIcon,
 } from "@ionic/react";
+
 import { useState } from "react";
 import {
   save,
@@ -125,7 +123,10 @@ const Perfil: React.FC = () => {
         <br />
         
         <IonFooter>
-          <IonToolbar>
+          <IonToolbar  className="tool">
+            <IonButtons slot="start">
+              <IonBackButton defaultHref="/" />
+            </IonButtons>
             <IonTitle>Salir</IonTitle>
           </IonToolbar>
         </IonFooter>

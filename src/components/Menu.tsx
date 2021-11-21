@@ -67,25 +67,13 @@ const appPages: AppPage[] = [
     iosIcon: flagOutline,
     mdIcon: flag,
   },
-];
-const labels: AppLabels[] = [
-  {
-    title: "Compartir",
-    iosIcon: shareSocialOutline,
-    mdIcon: shareSocial,
-  },
-  {
-    title: "Contactanos",
-    iosIcon: mailOutline,
-    mdIcon: mail,
-  },
   {
     title: "Cerrar Sesión",
+    url: "/",
     iosIcon: exitOutline,
     mdIcon: exit,
-  },
+  }
 ];
-
 const Menu: React.FC = () => {
   const location = useLocation();
 
@@ -117,16 +105,6 @@ const Menu: React.FC = () => {
               </IonMenuToggle>
             );
           })}
-        </IonList>
-
-        <IonList id="labels-list">
-          <IonListHeader>Información</IonListHeader>
-          {labels.map((label, index) => (
-            <IonItem lines="none" key={index}>
-              <IonIcon slot="start" ios={label.iosIcon} md={label.mdIcon} />
-              <IonLabel>{label.title}</IonLabel>
-            </IonItem>
-          ))}
         </IonList>
       </IonContent>
     </IonMenu>

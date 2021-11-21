@@ -64,6 +64,7 @@
     padding: 10px;
 }
 
+<<<<<<< HEAD
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -111,4 +112,9 @@ p {
 
 p b {
     color: var(--ion-text-color, #000000);
+=======
+.tool{
+    display:flex;
+    flex-direction: column;
+>>>>>>> 1ee9fc039f3159070ea9e34927180f1ea2e7640a
 }

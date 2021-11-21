@@ -1,0 +1,28 @@
+.titulo{
+    margin-top: 22px;
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.titulo .subtitulo {
+    font-size: medium;
+    top: 22px;
+    width: auto;
+    text-align: center;
+}
+
+.divBody {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    top: 0px;
+    padding-top: 22px;
+    align-items: center;
+}
+
+.divBody p{
+    color: gray;
+    text-align: center;
+}
