@@ -43,6 +43,7 @@
 
 .divDatos .purpleHr {
     margin-top: 10px;
+    width: 100%;
     background-color: #2563EB;
     border: 0.5px solid #2563EB;
     border-radius: 25px;

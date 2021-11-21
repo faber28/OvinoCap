@@ -6,8 +6,8 @@ import "./Page.css";
 
 const Inicio: React.FC = () => {
   return (
-    <IonPage>
-      <div className="screen">
+    <IonPage className="fondo">
+      <div className="screenInicio">
         <img alt="imagen" src={IconOvine} />
         <label>Hola!</label>
         <p>El mejor momento para cuidar de nuestros animales</p>

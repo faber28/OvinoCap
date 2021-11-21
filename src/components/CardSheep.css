@@ -10,10 +10,10 @@
     margin-left: 15px;
 }
 
-div hr {
+.cardSheep hr {
     width: 100%;
     margin-top: 5px;
     background-color: rgb(27, 105, 221);
-    border: 0.5 solid gray;
+    border: 0px solid gray;
     border-radius: 5px;
 }

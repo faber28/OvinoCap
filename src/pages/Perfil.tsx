@@ -44,8 +44,8 @@ const Perfil: React.FC = () => {
       </div>
      
       <div className="userLogo">
-        <IonListHeader>Manuel Guzman</IonListHeader>
-        <IonNote className="NOTA">manuelguma25@gmail.com</IonNote>
+        <IonListHeader>Faber Hoyos</IonListHeader>
+        <IonNote className="NOTA">faberhoyo01@gmail.com</IonNote>
       </div>
 
       <div>
@@ -96,6 +96,7 @@ const Perfil: React.FC = () => {
 
           <br />
           <IonItemDivider>Hectáreas</IonItemDivider>
+          <br/>
           <IonItem className="inputradio">
             <IonInput
             
@@ -108,6 +109,7 @@ const Perfil: React.FC = () => {
           <br />
          
           <IonItemDivider>Telefono</IonItemDivider>
+          <br/>
           <IonItem className="inputradio">
             <IonInput
             

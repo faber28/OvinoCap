@@ -2,6 +2,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
+.fondo{
+    background-color: #2563EB;
+}
+
 .screen {
     display: flex;
     background-color: #FFF;
@@ -12,13 +16,26 @@
     align-items: center;
 }
 
-label {
+.screenInicio {
+    display: flex;
+    background-color: #FFF;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    border: 15px solid #2563EB;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.screenInicio label {
     color: #2563EB;
     font-weight: bold;
     font-size: large;
 }
 
-p {
+.screenInicio p {
     text-align: center;
     color: #2563EB;
     font-size: large;
@@ -37,12 +54,12 @@ p {
 }
 
 .btnRelleno {
-    color: #2563EB;
+    color: white;
     border-radius: 10px;
     width: 50%;
     font-size: 20px;
     font-family: bold;
-    background-color: white;
-    border: 2px solid #2563EB;
+    background-color: #2563EB;
+    border: 2px solid white;
     padding: 10px;
 }

@@ -82,7 +82,7 @@ const Registro: React.FC = () => {
           <IonProgressBar
             className="progressbar"
             color="primary"
-            value={0.75}
+            value={0.80}
             buffer={0.5}
           ></IonProgressBar>
           <br />
