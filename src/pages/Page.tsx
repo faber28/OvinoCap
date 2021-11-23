@@ -15,6 +15,7 @@ import Perfil from "./Perfil";
 import Resultado from "./resultados";
 import Registro from "./Registro";
 import Guia from "./Guia";
+import Bienvenido from "./Bienvenido";
 
 const Page: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -107,8 +108,26 @@ const Page: React.FC = () => {
         </IonContent>
       </IonPage>
     );
-  }
-  else if(name === "Guia"){
+  } else if (name === "Bienvenido") {
+    return (
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>{name}</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">faber{name}</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <Bienvenido />
+        </IonContent>
+      </IonPage>
+    );
+  } else if (name === "Guia") {
     return (
       <IonPage>
         <IonHeader>
@@ -119,7 +138,7 @@ const Page: React.FC = () => {
             <IonTitle>{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-  
+
         <IonContent fullscreen>
           <IonHeader collapse="condense">
             <IonToolbar>
@@ -129,31 +148,23 @@ const Page: React.FC = () => {
           <Guia />
         </IonContent>
       </IonPage>
-  );
+    );
   }
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonMenuButton />
+            <IonBackButton defaultHref="/Page/Inicio" />
           </IonButtons>
-          <IonTitle>{name}</IonTitle>
+          <IonTitle>Ups! Lo sentimos!</IonTitle>
         </IonToolbar>
       </IonHeader>
-
-        <IonContent fullscreen>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">{name}</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-          <Registro />
-        </IonContent>
-      </IonPage>
-    );
-  
-   
+      <IonContent fullscreen>
+        <div className="divError">Algo salió mal. Intenta con otra ventana.</div>
+      </IonContent>
+    </IonPage>
+  );
 };
 
 export default Page;

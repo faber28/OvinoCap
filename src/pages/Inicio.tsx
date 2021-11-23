@@ -10,12 +10,12 @@ setupConfig({
 const Inicio: React.FC = () => {
   
   return (
-    <IonPage className="fondo">
+    <IonPage>
       <div className="screenInicio">
         <img alt="imagen" src={IconOvine} />
         <label>Hola!</label>
         <p>El mejor momento para cuidar de nuestros animales</p>
-        <Link className="link" to="/page/Inicio">
+        <Link className="link" to="/page/Bienvenido">
           <button className="btnRelleno">Iniciar</button>
         </Link>
       </div>

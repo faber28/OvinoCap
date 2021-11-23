@@ -21,11 +21,7 @@ import {
   paperPlaneOutline,
   homeOutline,
   exitOutline,
-  exit,
-  shareSocialOutline,
-  shareSocial,
-  mailOutline,
-  mail,
+  exit
 } from "ionicons/icons";
 import "./Menu.css";
 

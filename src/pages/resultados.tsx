@@ -4,6 +4,7 @@ import { Camera, CameraResultType } from "@capacitor/camera";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dialog } from '@capacitor/dialog';
+import IconReconocer from '../assets/IconReconocer.png';
 
 
 const showAlert = async () => {
@@ -14,9 +15,7 @@ const showAlert = async () => {
 };
 
 const Resultado: React.FC = () => {
-  const [imagen, setImagen] = useState<any>(
-    "https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
-  );
+  const [imagen, setImagen] = useState<any>(IconReconocer);
 
   const [porcentaje, setPorcentaje] = useState<any>("");
   const [nivel, setNivel] = useState<any>("");
